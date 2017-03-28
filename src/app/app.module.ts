@@ -11,6 +11,7 @@ import { MovieItemComponent } from './movies/movie-list/movie-item.component';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
 import { WishListComponent } from './wish-list/wish-list.component';
 import { WishListAddComponent } from './wish-list/wish-list-add.component';
+import { DropdownDirective } from './dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { WishListAddComponent } from './wish-list/wish-list-add.component';
     MovieItemComponent,
     MovieDetailComponent,
     WishListComponent,
-    WishListAddComponent
+    WishListAddComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
