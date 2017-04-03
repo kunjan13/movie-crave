@@ -1,26 +1,26 @@
-<div class="row">
-  <div class="col-xs-12">
-    <img src="{{selectedMovie?.imagePath}}" alt="Image Not Available" class="img-responsive">
+<div *ngIf="selectedMovie? true : false">
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="{{selectedMovie?.imagePath}}" alt="Image Not Available" class="img-responsive">
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    <h1>{{selectedMovie?.Name}}</h1>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{selectedMovie?.Name}}</h1>
+    </div>
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="AddToWishList()">To Wish List</button>
+    </div>
   </div>
-  <div class="col-xs-12">
-    <button class="btn btn-success">To Wish List</button>
-    <button class="btn btn-primary">Edit</button>
-    <button class="btn btn-danger">Delete</button>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <p>{{selectedMovie?.Description}}</p>
+    </div>
   </div>
-</div>
-<hr>
-<div class="row">
-  <div class="col-xs-12">
-    <p>{{selectedMovie?.Description}}</p>
-  </div>
-</div>
-<div class="row">
-  <div class="col-xs-12">
-    Casting
+  <div class="row">
+    <div class="col-xs-12">
+      Casting
+    </div>
   </div>
 </div>

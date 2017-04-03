@@ -1,4 +1,4 @@
-<a href="#" class="list-group-item clearfix">
+<a [routerLink]="[movie.movieId]" class="list-group-item clearfix" routerLinkActive="active">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{movie.Name}}</h4>
     <span class="pull-left">
@@ -6,5 +6,4 @@
     </span>
     <p class="list-group-item-text margin-left">{{movie.Description}}</p>
   </div>
-  
 </a>

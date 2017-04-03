@@ -3,6 +3,7 @@
       <movcrav-movie-list (movieSelected)="selectedMovie = $event"></movcrav-movie-list>
   </div>
   <div class="col-md-7">
-      <movcrav-movie-detail [selectedMovie]="selectedMovie"></movcrav-movie-detail>
+      <router-outlet></router-outlet>
+      <!--<movcrav-movie-detail [selectedMovie]="selectedMovie"></movcrav-movie-detail>-->
   </div>
 </div>
