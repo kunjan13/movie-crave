@@ -6,7 +6,6 @@ import { MovieService } from "app/movies/movie.service";
 @Component({
   selector: 'movcrav-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css'],
   providers: [MovieService]
 })
 export class MovieListComponent implements OnInit {

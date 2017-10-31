@@ -12,11 +12,12 @@ import { MovieDetailComponent } from './movies/movie-detail/movie-detail.compone
 import { WishListComponent } from './wish-list/wish-list.component';
 import { WishListAddComponent } from './wish-list/wish-list-add.component';
 import { DropdownDirective } from './dropdown.directive';
-import { routing } from "app/app.routes";
+import { AppRoutingModule } from "app/app.routes";
 import { WishListService } from "app/wish-list/wish-list.service";
 import { PagenotfoundComponent } from './error-pages/pagenotfound.component';
 import { SignUpComponent } from './account/sign-up.component';
-
+import { HomeSliderComponent } from './plugin-component/home-slider/home-slider.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,15 @@ import { SignUpComponent } from './account/sign-up.component';
     WishListAddComponent,
     DropdownDirective,
     PagenotfoundComponent,
-    SignUpComponent
+    SignUpComponent,
+    HomeSliderComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    AppRoutingModule
   ],
   providers: [WishListService],
   bootstrap: [AppComponent]
