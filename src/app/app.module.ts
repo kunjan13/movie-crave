@@ -18,6 +18,7 @@ import { PagenotfoundComponent } from './error-pages/pagenotfound.component';
 import { SignUpComponent } from './account/sign-up.component';
 import { HomeSliderComponent } from './plugin-component/home-slider/home-slider.component';
 import { HomeComponent } from './home/home.component';
+ 
 
 @NgModule({
   declarations: [
