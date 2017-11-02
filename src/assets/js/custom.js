@@ -314,118 +314,130 @@ $(function () {
 	// });
 
 });
+function InitInTheatresOnTvSlider() {
+	$(document).ready(function () {
+		//alert('tv');
+		var multiItem = $('.slick-multiItem');
+		//slider movie and tv show home 1, 3
+		multiItem.not('.slick-initialized').slick({
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			arrows: false,
+			draggable: true,
+			// autoplay: true,
+			// autoplaySpeed: 2000,
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
+		});
+	});
 
+}
 function InitSlider() {
-	var multiItem = $('.slick-multiItem');
-	var multiItem2 = $('.slick-multiItem2');
-	//slider for movie and tv show home 2
-	multiItem2.slick({
-		infinite: true,
-		slidesToShow: 6,
-		slidesToScroll: 6,
-		arrows: false,
-		// autoplay: true ,
-		// autoplaySpeed: 2000,
-		dots: true,
-		responsive: [
-			{
-				breakpoint: 1200,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true
+
+	$(document).ready(function () {
+		//alert('tv');
+		var multiItem = $('.slick-multiItem');
+		//slider movie and tv show home 1, 3
+		multiItem.not('.slick-initialized').slick({
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			arrows: false,
+			draggable: true,
+			// autoplay: true,
+			// autoplaySpeed: 2000,
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
 				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3
+			]
+		});
+
+		//main slider home 1
+		var multiItemSlider = $('.slick-multiItemSlider');
+		multiItemSlider.not('.slick-initialized').slick({
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			arrows: false,
+			draggable: true,
+			autoplay: true,
+			autoplaySpeed: 2000,
+			dots: true,
+			responsive: [
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3,
+						infinite: true,
+						dots: true
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
 				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
+			]
+		});
 	});
-	//slider movie and tv show home 1, 3
-	multiItem.slick({
-		infinite: true,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		arrows: false,
-		draggable: true,
-		// autoplay: true,
-		// autoplaySpeed: 2000,
-		dots: true,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	});
-	//main slider home 1
-	var multiItemSlider = $('.slick-multiItemSlider');
-	multiItemSlider.slick({
-		infinite: true,
-		slidesToShow: 4,
-		slidesToScroll: 4,
-		arrows: false,
-		draggable: true,
-		autoplay: true,
-		autoplaySpeed: 2000,
-		dots: true,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
-					infinite: true,
-					dots: true
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2
-				}
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1
-				}
-			}
-		]
-	});
+
 	//slider for home v3 and home v2, twitter slider home 1, 2
 	var singleItem = $('.slider-single-item');
 	singleItem.slick({
@@ -574,12 +586,15 @@ function InitSlider() {
 	});
 }
 
-var myExtObject = (function() {
-	
-	  return {
-		func1: function() {
-		  InitSlider();
+var myExtObject = (function () {
+
+	return {
+		func1: function () {
+			InitSlider();
+		},
+		func2: function () {
+			InitInTheatresOnTvSlider();
 		}
-	  }
-	
-	})(myExtObject||{})
+	}
+
+})(myExtObject || {})

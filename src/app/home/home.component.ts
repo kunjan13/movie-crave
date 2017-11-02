@@ -11,23 +11,38 @@ declare var myExtObject: any;
 })
 export class HomeComponent implements OnInit {
   moviesInTheatres = [];
+  onTvLatest = [];
+  onTvPopular = [];
+  onTvTopRated = [];
+  onTvAiringToday = [];
   constructor(private tmdbService : TmdbService) {
 
 
    }
 
   ngOnInit() {
-    this.tmdbService.getMoviesInTheatres()
-      .subscribe(resMoviesInTheatres => dataSuccess(resMoviesInTheatres.results));
-      
 
-      function dataSuccess(data)
-      {
-        console.log('called');
-        this.moviesInTheatres = data;
-        console.log(this.moviesInTheatres);
-        //myExtObject.func1();
-      }
+    //In Theatres
+    this.tmdbService.getMoviesInTheatres()
+      .subscribe(resMoviesInTheatres => this.moviesInTheatres = resMoviesInTheatres.results);
+    
+      
+    //On Tv
+    //latest
+    // this.tmdbService.getOnTvLatest()
+    // .subscribe(resMoviesInTheatres => this.onTvLatest = resMoviesInTheatres.results);
+
+    //Popular
+    this.tmdbService.getOnTvPopular()
+    .subscribe(resMoviesInTheatres => this.onTvPopular = resMoviesInTheatres.results);
+
+    //Top rated
+    this.tmdbService.getOnTvTopRated()
+    .subscribe(resMoviesInTheatres => this.onTvTopRated = resMoviesInTheatres.results);
+
+    //Airing Today
+    this.tmdbService.getOnTvAiringToday()
+    .subscribe(resMoviesInTheatres => this.onTvAiringToday = resMoviesInTheatres.results);
   }
   
   
