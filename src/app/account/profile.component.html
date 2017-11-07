@@ -1,0 +1,58 @@
+<div style="background-color:#ffffff" >
+  <h1>User Profile</h1>
+  <form #f="ngForm" (ngSubmit)="OnSubmit(f.value)">
+    <div class="formControl">
+      <label for="fname">Firstname</label>
+      <input type="text" required maxlength="50" id="fname" name="fname" #fname="ngModel" [ngModel]="userForm.fname">
+      <div *ngIf="fname.errors && !fname.pristine">
+        <div [hidden]="!fname.errors.required" class="alert alert-danger">
+          Firstname is required
+        </div>
+        <div [hidden]="!fname.errors.maxlength" class="alert alert-danger">
+          Firstname can be of maximum 50 characters
+        </div>
+      </div>
+    </div>
+    <div class="formControl">
+      <label for="lname">Lastname</label>
+      <input type="text" required maxlength="50" id="lname" name="lname" #lname="ngModel" [ngModel]="userForm.lname">
+      <div *ngIf="lname.errors && !lname.pristine">
+        <div [hidden]="!lname.errors.required" class="alert alert-danger">
+          Lastname is required
+        </div>
+        <div [hidden]="!lname.errors.maxlength" class="alert alert-danger">
+          Lastname can be of maximum 50 characters
+        </div>
+      </div>
+    </div>
+    <div class="formControl">
+      <label for="uname">Username</label>
+      <input type="text" required minlength="5" maxlength="50" id="uname" name="uname" #uname="ngModel" [ngModel]="userForm.uname">
+      <div *ngIf="uname.errors && !uname.pristine">
+        <div [hidden]="!uname.errors.required" class="alert alert-danger">
+          Username is required
+        </div>
+        <div [hidden]="!uname.errors.minlength" class="alert alert-danger">
+          Username should be of atleast 5 characters
+        </div>
+        <div [hidden]="!uname.errors.maxlength" class="alert alert-danger">
+          Username can be of maximum 50 characters
+        </div>
+      </div>
+    </div>
+
+    <div class="formControl">
+      <label for="email">Email</label>
+      <input type="text" required id="email" name="email" #email="ngModel" [ngModel]="userForm.email">
+      <div *ngIf="email.errors && !email.pristine">
+        <div [hidden]="!email.errors.required" class="alert alert-danger">
+          Email is required
+        </div>
+        <div [hidden]="!email.errors.pattern" class="alert alert-danger">
+          Please enter valid email address
+        </div>
+      </div>
+    </div>
+    <input type="submit" value="Submit" [disabled]="!f.valid" />
+  </form>
+</div>

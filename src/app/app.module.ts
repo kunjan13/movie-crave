@@ -18,6 +18,7 @@ import { PagenotfoundComponent } from './error-pages/pagenotfound.component';
 import { SignUpComponent } from './account/sign-up.component';
 import { HomeSliderComponent } from './plugin-component/home-slider/home-slider.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './account/profile.component';
  
 
 @NgModule({
@@ -34,7 +35,8 @@ import { HomeComponent } from './home/home.component';
     PagenotfoundComponent,
     SignUpComponent,
     HomeSliderComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

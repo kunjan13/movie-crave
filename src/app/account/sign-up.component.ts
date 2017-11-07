@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from "@angular/forms";
+//import { NgForm } from "@angular/forms";
 
 @Component({
   selector: 'movcrav-sign-up',
@@ -12,8 +12,7 @@ export class SignUpComponent implements OnInit {
     password: ''
   };
 
-  onSubmit(form: NgForm) {
-    console.log(form.value);
+  onSubmit(form) {
     console.log(form);
   }
   

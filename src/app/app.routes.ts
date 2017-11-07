@@ -6,6 +6,7 @@ import { MOVIES_ROUTES } from "app/movies/movies.routes";
 import { PagenotfoundComponent } from "app/error-pages/pagenotfound.component";
 import { SignUpComponent } from "app/account/sign-up.component";
 import { HomeComponent } from "app/home/home.component";
+import { ProfileComponent } from "app/account/profile.component";
 
 
 const APP_ROUTES : Routes = [
@@ -14,6 +15,7 @@ const APP_ROUTES : Routes = [
         { path: 'movies', component : MoviesComponent, children : MOVIES_ROUTES},
         { path: 'wish', component : WishListComponent},
         { path: 'signup', component : SignUpComponent},
+        { path: 'profile', component : ProfileComponent},
         { path: '**', component : PagenotfoundComponent}
 ];
 
